@@ -1,5 +1,7 @@
 name: sehatbersama
-description: BPJS Kesehatan merupakan Badan Hukum Publik yang bertanggung jawab langsung kepada Presiden dan memiliki tugas untuk menyelenggarakan jaminan Kesehatan Nasional bagi seluruh rakyat Indonesia.
+description: BPJS Kesehatan merupakan Badan Hukum Publik yang bertanggung jawab
+  langsung kepada Presiden dan memiliki tugas untuk menyelenggarakan jaminan
+  Kesehatan Nasional bagi seluruh rakyat Indonesia.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -29,19 +31,28 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  auto_size_text: ^3.0.0
+  cached_network_image: ^3.2.2
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
   flutter_native_splash: ^2.2.10+1
   get: ^4.6.5
+  google_fonts: ^3.0.1
+  intl: ^0.17.0
   lottie: ^1.4.3
+  pinput: ^2.2.16
+  shared_preferences: ^2.0.15
   shimmer: ^2.0.0
+  slider_captcha: ^0.1.7
+  step_progress_indicator: ^1.0.2
+  supercharged: ^2.1.1
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.10.0
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.10.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -73,6 +84,7 @@ flutter:
     - assets/icon/
     - assets/logo/
     - assets/lottie/
+    - assets/captcha/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
