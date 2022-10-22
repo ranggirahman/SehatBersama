@@ -10,6 +10,7 @@ import 'register/step1.dart';
 import 'register/step2.dart';
 import 'register/step3.dart';
 import 'register/step4.dart';
+import 'home/home.dart';
 
 void main() {
   FlutterNativeSplash.removeAfter(initialization);
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Sehat Bersama",
-      home: LoginPageWidget(),
+      // home: LoginPageWidget(),
 
       // forgot password
       // home: ForgotSatuWidget(),
@@ -42,6 +43,9 @@ class MyApp extends StatelessWidget {
       // home: RegisDuaWidget(),
       // home: RegisTigaWidget(),
       // home: RegisEmpatWidget(),
+
+      // Home
+      home: HomePageWidget(),
     );
   }
 }

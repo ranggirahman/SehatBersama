@@ -211,7 +211,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         style: themeSubtitle2White,
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF04A04A),
+                        primary: "#36B36E".toColor(),
                         minimumSize: Size(100, 40),
                         padding: EdgeInsets.symmetric(horizontal: 16),
                         shape: const RoundedRectangleBorder(

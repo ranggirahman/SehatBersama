@@ -33,12 +33,15 @@ environment:
 dependencies:
   auto_size_text: ^3.0.0
   cached_network_image: ^3.2.2
+  carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
   flutter_native_splash: ^2.2.10+1
+  flutter_svg: ^1.1.5
   get: ^4.6.5
   google_fonts: ^3.0.1
+  heroicons: ^0.7.0
   intl: ^0.17.0
   lottie: ^1.4.3
   pinput: ^2.2.16
@@ -85,6 +88,8 @@ flutter:
     - assets/logo/
     - assets/lottie/
     - assets/captcha/
+    - assets/dummy/
+    - assets/banner/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

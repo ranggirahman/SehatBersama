@@ -21,6 +21,12 @@ TextStyle themeTitle3 = GoogleFonts.poppins().copyWith(
   fontWeight: FontWeight.w600,
 );
 
+TextStyle themeTitle4 = GoogleFonts.poppins().copyWith(
+  color: "#101213".toColor(),
+  fontSize: 16,
+  fontWeight: FontWeight.w600,
+);
+
 TextStyle themeSubtitle1 = GoogleFonts.poppins().copyWith(
   color: "#101213".toColor(),
   fontSize: 18,
@@ -73,6 +79,12 @@ TextStyle themeBodyTextLightSecondary = GoogleFonts.poppins().copyWith(
   color: "#57636C".toColor(),
   fontSize: 14,
   fontWeight: FontWeight.w500,
+);
+
+TextStyle themeBodyTextVeryLightSecondary = GoogleFonts.poppins().copyWith(
+  color: "#57636C".toColor(),
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
 );
 
 final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
