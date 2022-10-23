@@ -1,17 +1,13 @@
-import '../config/theme.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:supercharged/supercharged.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
+part of '../main.dart';
 
-class ForgotDuaWidget extends StatefulWidget {
-  const ForgotDuaWidget({Key? key}) : super(key: key);
+class ForgotDuaPage extends StatefulWidget {
+  const ForgotDuaPage({Key? key}) : super(key: key);
 
   @override
-  _ForgotDuaWidgetState createState() => _ForgotDuaWidgetState();
+  _ForgotDuaPageState createState() => _ForgotDuaPageState();
 }
 
-class _ForgotDuaWidgetState extends State<ForgotDuaWidget> {
+class _ForgotDuaPageState extends State<ForgotDuaPage> {
   TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -31,20 +27,42 @@ class _ForgotDuaWidgetState extends State<ForgotDuaWidget> {
   Widget build(BuildContext context) {
     // getting the size of the window
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      extendBodyBehindAppBar: true,
       key: scaffoldKey,
-      // backgroundColor: Colors.white,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        // backgroundColor: Color(0x00FFFFFF),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         iconTheme: IconThemeData(color: Colors.black),
         title: const Text(
           'Lupa Password',
           style: TextStyle(color: Colors.black),
         ),
         elevation: 0,
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                child: StepProgressIndicator(
+                  totalSteps: 4,
+                  currentStep: 2,
+                  size: 8,
+                  selectedColor: "#36B36E".toColor(),
+                  roundedEdges: Radius.circular(10),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 10),
+                child: Text(
+                  '2 dari 4 - Metode Pemulihan',
+                  style: themeBodyText1,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -57,27 +75,17 @@ class _ForgotDuaWidgetState extends State<ForgotDuaWidget> {
           shape: BoxShape.rectangle,
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(10, 90, 10, 10),
+          padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              StepProgressIndicator(
-                totalSteps: 4,
-                currentStep: 2,
-                selectedColor: "#36B36E".toColor(),
-              ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                child: Text(
-                  '2 dari 4 - Metode Pemulihan',
-                  style: themeBodyText1,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                 child: ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(ForgotTigaPage());
+                  },
                   icon: Icon(
                     Icons.phone,
                     color: "#36B36E".toColor(),
@@ -96,7 +104,9 @@ class _ForgotDuaWidgetState extends State<ForgotDuaWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(ForgotTigaBPage());
+                  },
                   icon: Icon(
                     Icons.email,
                     color: "#36B36E".toColor(),

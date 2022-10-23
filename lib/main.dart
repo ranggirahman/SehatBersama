@@ -1,16 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pinput/pinput.dart';
+import 'package:heroicons/heroicons.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:supercharged/supercharged.dart';
+import 'package:slider_captcha/slider_capchar.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
-import './login/login.dart';
-import 'forgotpassword/step1.dart';
-import 'forgotpassword/step2.dart';
-import 'forgotpassword/step3.dart';
-import 'forgotpassword/step4.dart';
-import 'register/step1.dart';
-import 'register/step2.dart';
-import 'register/step3.dart';
-import 'register/step4.dart';
-import 'home/home.dart';
+// Style
+import '../config/theme.dart';
+import './home/widget/buildHome.dart';
+// Login
+part './login/login.dart';
+
+// Forgotpassword
+part 'forgotpassword/step1.dart';
+part 'forgotpassword/step2.dart';
+part 'forgotpassword/step3.dart';
+part 'forgotpassword/step3b.dart';
+part 'forgotpassword/step4.dart';
+
+// // Register
+part 'register/step1.dart';
+part 'register/step2.dart';
+part 'register/step3.dart';
+part 'register/step4.dart';
+
+// // Home
+part 'home/home.dart';
 
 void main() {
   FlutterNativeSplash.removeAfter(initialization);
@@ -27,25 +46,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Sehat Bersama",
-      // home: LoginPageWidget(),
-
-      // forgot password
-      // home: ForgotSatuWidget(),
-      // home: ForgotDuaWidget(),
-      // home: ForgotTigaWidget(),
-      // home: ForgotEmpatWidget(),
-
-      // Register
-      // home: RegisSatuWidget(),
-      // home: RegisDuaWidget(),
-      // home: RegisTigaWidget(),
-      // home: RegisEmpatWidget(),
-
-      // Home
-      home: HomePageWidget(),
+      home: LoginPage(),
     );
   }
 }

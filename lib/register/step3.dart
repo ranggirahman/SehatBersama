@@ -1,17 +1,13 @@
-import '../config/theme.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:supercharged/supercharged.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
+part of '../main.dart';
 
-class RegisTigaWidget extends StatefulWidget {
-  const RegisTigaWidget({Key? key}) : super(key: key);
+class RegisTigaPage extends StatefulWidget {
+  const RegisTigaPage({Key? key}) : super(key: key);
 
   @override
-  _RegisTigaWidgetState createState() => _RegisTigaWidgetState();
+  _RegisTigaPageState createState() => _RegisTigaPageState();
 }
 
-class _RegisTigaWidgetState extends State<RegisTigaWidget> {
+class _RegisTigaPageState extends State<RegisTigaPage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   TextEditingController? textController1;
   TextEditingController? textController2;
@@ -37,18 +33,42 @@ class _RegisTigaWidgetState extends State<RegisTigaWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      extendBodyBehindAppBar: true,
       key: scaffoldKey,
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0x00FFFFFF),
+        backgroundColor: Colors.white,
         iconTheme: IconThemeData(color: Colors.black),
         title: const Text(
           'Daftar',
           style: TextStyle(color: Colors.black),
         ),
         elevation: 0,
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(60),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                child: StepProgressIndicator(
+                  totalSteps: 4,
+                  currentStep: 3,
+                  size: 8,
+                  selectedColor: "#36B36E".toColor(),
+                  roundedEdges: Radius.circular(10),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 10),
+                child: Text(
+                  '3 dari 4 - Buat Password',
+                  style: themeBodyText1,
+                  textAlign: TextAlign.left,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -61,25 +81,13 @@ class _RegisTigaWidgetState extends State<RegisTigaWidget> {
           shape: BoxShape.rectangle,
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(10, 100, 10, 10),
+          padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              StepProgressIndicator(
-                totalSteps: 4,
-                currentStep: 3,
-                selectedColor: "#36B36E".toColor(),
-              ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                child: Text(
-                  '3 dari 4 - Buat Password',
-                  style: themeBodyText1,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                 child: Text(
                   'Password Baru',
                   style: themeBodyText1,
@@ -169,7 +177,9 @@ class _RegisTigaWidgetState extends State<RegisTigaWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(RegisEmpatPage());
+                  },
                   child: Text(
                     'Selanjutnya',
                     style: themeSubtitle2White,

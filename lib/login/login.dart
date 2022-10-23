@@ -1,16 +1,13 @@
-import '../config/theme.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:supercharged/supercharged.dart';
+part of '../main.dart';
 
-class LoginPageWidget extends StatefulWidget {
-  const LoginPageWidget({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  _LoginPageWidgetState createState() => _LoginPageWidgetState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _LoginPageWidgetState extends State<LoginPageWidget> {
+class _LoginPageState extends State<LoginPage> {
   TextEditingController? textController1;
   TextEditingController? textController2;
 
@@ -189,7 +186,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(ForgotSatuPage());
+                                  },
                                   child: Text(
                                     'Lupa password?',
                                     style: themeBodyText1Primary,
@@ -205,7 +204,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.offAll(HomePage());
+                      },
                       child: Text(
                         'Masuk',
                         style: themeSubtitle2White,
@@ -249,7 +250,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(RegisSatuPage());
+                                  },
                                   child: Text(
                                     'Klik disini',
                                     style: themeBodyTextLightPrimary,

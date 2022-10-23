@@ -1,21 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sehatbersama/config/theme.dart';
-import 'package:supercharged/supercharged.dart';
-import 'package:heroicons/heroicons.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+part of '../main.dart';
 
-// widget
-import 'widget/buildHome.dart';
-
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<HomePageWidget> createState() => _HomePageWidgetState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   @override
@@ -69,9 +61,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   ),
                 ),
               ),
+              CardListView(),
               CarouselSlider(
                 options: CarouselOptions(
-                  height: 140,
+                  height: 100,
                   viewportFraction: 1,
                   enlargeCenterPage: true,
                   autoPlay: true,
@@ -100,7 +93,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   );
                 }).toList(),
               ),
-              CardListView(),
             ],
           ),
         ),
@@ -179,10 +171,10 @@ class CardListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, right: 25.0, bottom: 0),
+      padding: const EdgeInsets.only(top: 0, right: 25.0, bottom: 0),
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height - 340,
+        height: MediaQuery.of(context).size.height - 350,
         child: GridView(
           padding: EdgeInsets.zero,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
