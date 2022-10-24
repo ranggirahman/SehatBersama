@@ -1,7 +1,5 @@
 name: sehatbersama
-description: BPJS Kesehatan merupakan Badan Hukum Publik yang bertanggung jawab
-  langsung kepada Presiden dan memiliki tugas untuk menyelenggarakan jaminan
-  Kesehatan Nasional bagi seluruh rakyat Indonesia.
+description: Aplikasi Sehat Bersama adalah aplikasi yang bertujuan memudahkan masyarakat Indonesia untuk mengakses layanan kesehatan secara digital dimana saja dan kapan saja tanpa harus melalui proses panjang untuk mendapatkan layanan kesehatan yang layak.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
