@@ -165,6 +165,34 @@ class _HomePageState extends State<HomePage> {
                       setState(() {
                         _selectedIndex = 1;
                       });
+                      Get.defaultDialog(
+                        barrierDismissible: false,
+                        radius: 15,
+                        titlePadding:
+                            EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                        contentPadding:
+                            EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
+                        title: "Pemberitahuan",
+                        middleText: "Fitur Dalam Proses Pengembangan",
+                        cancel: ElevatedButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: Text(
+                            "Tutup",
+                            style: themeCardText1white,
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: "#57636C".toColor(),
+                            minimumSize: Size(40, 30),
+                            padding: EdgeInsets.symmetric(horizontal: 12),
+                            shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8)),
+                            ),
+                          ),
+                        ),
+                      );
                     },
                   ),
                   IconBottomBar(
@@ -186,6 +214,34 @@ class _HomePageState extends State<HomePage> {
                       setState(() {
                         _selectedIndex = 3;
                       });
+                      Get.defaultDialog(
+                        barrierDismissible: false,
+                        radius: 15,
+                        titlePadding:
+                            EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                        contentPadding:
+                            EdgeInsetsDirectional.fromSTEB(20, 10, 20, 10),
+                        title: "Pemberitahuan",
+                        middleText: "Fitur Dalam Proses Pengembangan",
+                        cancel: ElevatedButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: Text(
+                            "Tutup",
+                            style: themeCardText1white,
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: "#57636C".toColor(),
+                            minimumSize: Size(40, 30),
+                            padding: EdgeInsets.symmetric(horizontal: 12),
+                            shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8)),
+                            ),
+                          ),
+                        ),
+                      );
                     },
                   ),
                   IconBottomBar(
