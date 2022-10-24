@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
           preferredSize: Size.fromHeight(33),
           child: HeaderCustom(
             title: 'Selamat Datang,',
-            upperTitle: 'Damar Yosa Aji',
+            upperTitle: 'ILHAM RIZKI JULIANTO',
           ),
         ),
       ),
@@ -73,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                 child: CarouselSlider(
                   options: CarouselOptions(
-                    height: 100,
+                    height: 120,
                     viewportFraction: 1,
                     enlargeCenterPage: true,
                     autoPlay: true,
@@ -128,81 +128,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                blurRadius: 4,
-                spreadRadius: 0,
-                color: Colors.grey.withOpacity(.3)),
-          ],
-        ),
-        child: BottomAppBar(
-          color: "#FFFFFF".toColor(),
-          child: SizedBox(
-            height: 70,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconBottomBar(
-                    text: "Home",
-                    iconVar: HeroIcons.home,
-                    selected: _selectedIndex == 0,
-                    onPressed: () {
-                      setState(() {
-                        _selectedIndex = 0;
-                      });
-                    },
-                  ),
-                  IconBottomBar(
-                    text: "Konsultasi",
-                    iconVar: HeroIcons.chatBubbleLeftRight,
-                    selected: _selectedIndex == 1,
-                    onPressed: () {
-                      setState(() {
-                        _selectedIndex = 1;
-                      });
-                    },
-                  ),
-                  IconBottomBar(
-                    text: "Peserta",
-                    iconVar: HeroIcons.users,
-                    selected: _selectedIndex == 2,
-                    onPressed: () {
-                      setState(() {
-                        _selectedIndex = 2;
-                      });
-                    },
-                  ),
-                  IconBottomBar(
-                    text: "Artikel",
-                    iconVar: HeroIcons.newspaper,
-                    selected: _selectedIndex == 3,
-                    onPressed: () {
-                      setState(() {
-                        _selectedIndex = 3;
-                      });
-                    },
-                  ),
-                  IconBottomBar(
-                    text: "Setelan",
-                    iconVar: HeroIcons.cog6Tooth,
-                    selected: _selectedIndex == 4,
-                    onPressed: () {
-                      setState(() {
-                        _selectedIndex = 4;
-                      });
-                      Get.offAll(() => LoginPage());
-                    },
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
+      bottomNavigationBar: buildNavigation(),
     );
   }
 }

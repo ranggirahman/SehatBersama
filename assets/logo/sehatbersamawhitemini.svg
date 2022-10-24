@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="500px" height="500px" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 500 500"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+    <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="227" y1="285" x2="286" y2="285">
+     <stop offset="0" stop-opacity="1" stop-color="#FEFEFE"/>
+     <stop offset="1" stop-opacity="1" stop-color="#EEEEEF"/>
+    </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1859059846752">
+   <path fill="#EEEEEF" d="M336 160c24,-27 59,-8 64,24 7,42 -29,110 -53,138 37,-35 66,-77 75,-125 4,-22 -1,-41 -13,-55 -12,-14 -29,-18 -45,-12 -12,5 -31,13 -30,30l0 0z"/>
+   <path fill="#EEEEEF" d="M140 289c-21,-28 -35,-59 -34,-92 1,-40 31,-67 70,-51 23,9 48,30 72,28 6,0 12,-2 17,-5 13,-7 23,-20 25,-34 -24,20 -45,9 -67,-6 -17,-12 -31,-24 -58,-28 -28,-4 -56,7 -72,29 -18,25 -16,67 -4,93 10,23 22,55 52,66l0 0z"/>
+   <path fill="#EEEEEF" d="M233 401c55,-27 81,-79 80,-135 -11,38 -37,65 -57,75 -4,-5 -16,-14 -30,-22 -48,-25 -77,-41 -95,-82 9,43 50,80 82,106 16,13 30,36 20,58l0 0z"/>
+   <path fill="#FEFEFE" d="M93 130c-2,2 -3,5 -5,8 -40,72 23,209 99,251 36,20 48,-11 20,-33 -41,-33 -93,-91 -114,-139 -11,-26 -18,-62 -1,-87l0 0z"/>
+   <path fill="#FEFEFE" d="M233 401c47,-21 123,-92 131,-146 5,-36 -39,-49 -48,-3 -1,5 -2,9 -3,14 -11,48 -38,114 -80,135l0 0z"/>
+   <path fill="#FEFEFE" d="M368 133c16,-6 32,-4 43,8 -20,-25 -59,-32 -91,-4 -18,15 -28,32 -43,42 -20,13 -48,15 -69,4 -22,-11 -37,13 -17,28 25,20 59,19 87,4 23,-13 41,-35 60,-55 9,-10 19,-21 32,-26l0 0z"/>
+   <path fill="url(#id0)" d="M257 314c16,0 29,-13 29,-29 0,-16 -13,-29 -29,-29 -16,0 -29,13 -29,29 0,16 13,29 29,29l0 0z"/>
+  </g>
+ </g>
+</svg>

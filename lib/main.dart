@@ -12,7 +12,6 @@ import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 // Style
 import '../config/theme.dart';
-import './home/widget/buildHome.dart';
 // Login
 part './login/login.dart';
 
@@ -31,6 +30,8 @@ part 'register/step4.dart';
 
 // // Home
 part 'home/home.dart';
+part 'home/widget/buildHome.dart';
+part 'peserta/peserta.dart';
 
 void main() {
   FlutterNativeSplash.removeAfter(initialization);

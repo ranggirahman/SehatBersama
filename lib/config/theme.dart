@@ -32,6 +32,11 @@ TextStyle themeSubtitle1 = GoogleFonts.poppins().copyWith(
   fontSize: 18,
   fontWeight: FontWeight.w600,
 );
+TextStyle themeSubtitle1white = GoogleFonts.poppins().copyWith(
+  color: "#FFFFFF".toColor(),
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+);
 
 TextStyle themeSubtitle2 = GoogleFonts.poppins().copyWith(
   color: "#57636C".toColor(),
@@ -47,6 +52,12 @@ TextStyle themeSubtitle2White = GoogleFonts.poppins().copyWith(
 
 TextStyle themeBodyText1 = GoogleFonts.poppins().copyWith(
   color: "#101213".toColor(),
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+);
+
+TextStyle themeBodyText1white = GoogleFonts.poppins().copyWith(
+  color: "#FFFFFF".toColor(),
   fontSize: 14,
   fontWeight: FontWeight.w600,
 );
@@ -84,6 +95,18 @@ TextStyle themeBodyTextLightSecondary = GoogleFonts.poppins().copyWith(
 TextStyle themeBodyTextVeryLightSecondary = GoogleFonts.poppins().copyWith(
   color: "#57636C".toColor(),
   fontSize: 14,
+  fontWeight: FontWeight.w400,
+);
+
+TextStyle themeCardText1 = GoogleFonts.poppins().copyWith(
+  color: "#2C2C2C".toColor(),
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+);
+
+TextStyle themeCardText1white = GoogleFonts.poppins().copyWith(
+  color: "#FFFFFF".toColor(),
+  fontSize: 12,
   fontWeight: FontWeight.w400,
 );
 
