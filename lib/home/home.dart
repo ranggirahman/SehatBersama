@@ -38,114 +38,90 @@ class _HomePageState extends State<HomePage> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: ListView(
             children: [
-              Column(
-                children: [
-                  // Isi Biodata
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 15),
-                    child: ElevatedButton.icon(
-                      onPressed: () {},
-                      icon: HeroIcon(
-                        HeroIcons.informationCircle,
-                        color: "#36B36E".toColor(),
-                      ),
-                      label: Text(
-                        "Lengkapi Biodata Anda",
-                        style: themeBodyText1,
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        alignment: Alignment.centerLeft,
-                        elevation: 0,
-                        backgroundColor: Colors.white,
-                        minimumSize:
-                            Size(MediaQuery.of(context).size.width - 45, 40),
-                        side: BorderSide(
-                          width: 1.0,
-                          color: "#DADEE3".toColor(),
-                        ),
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(8)),
-                        ), // NEW
-                      ),
-                    ),
+              // Isi Biodata
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 15),
+                child: ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: HeroIcon(
+                    HeroIcons.informationCircle,
+                    color: "#36B36E".toColor(),
                   ),
+                  label: Text(
+                    "Lengkapi Biodata Anda",
+                    style: themeBodyText1,
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    alignment: Alignment.centerLeft,
+                    elevation: 0,
+                    backgroundColor: Colors.white,
+                    minimumSize:
+                        Size(MediaQuery.of(context).size.width - 45, 40),
+                    side: BorderSide(
+                      width: 1.0,
+                      color: "#DADEE3".toColor(),
+                    ),
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                    ), // NEW
+                  ),
+                ),
+              ),
 
-                  // Banner
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                    child: CarouselSlider(
-                      options: CarouselOptions(
-                        height: 140,
-                        viewportFraction: 1,
-                        enlargeCenterPage: true,
-                        autoPlay: true,
-                        autoPlayAnimationDuration: Duration(seconds: 1),
-                      ),
-                      items: imgList.map((i) {
-                        return Builder(
-                          builder: (BuildContext context) {
-                            return Container(
-                              decoration: BoxDecoration(
-                                border: Border.all(color: "#DADEE3".toColor()),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8)),
-                              ),
-                              width: MediaQuery.of(context).size.width,
-                              margin: EdgeInsets.symmetric(horizontal: 20),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8),
-                                child: Image.asset(
-                                  i,
-                                  fit: BoxFit.cover,
-                                  width: 1000,
-                                ),
-                              ),
-                            );
-                          },
+              // Banner
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    height: 100,
+                    viewportFraction: 1,
+                    enlargeCenterPage: true,
+                    autoPlay: true,
+                    autoPlayAnimationDuration: Duration(seconds: 1),
+                  ),
+                  items: imgList.map((i) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: "#DADEE3".toColor()),
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                          ),
+                          width: MediaQuery.of(context).size.width,
+                          margin: EdgeInsets.symmetric(horizontal: 20),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              i,
+                              fit: BoxFit.cover,
+                              width: 1000,
+                            ),
+                          ),
                         );
-                      }).toList(),
-                    ),
-                  ),
+                      },
+                    );
+                  }).toList(),
+                ),
+              ),
 
-                  // Menu
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            BuildCard(
-                                "Layanan Kesehatan", "assets/icon/doctor.png"),
-                            BuildCard(
-                                "Agenda Tindakan ", "assets/icon/calendar.png"),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            BuildCard(
-                                "Skrining Kesehatan", "assets/icon/scan.png"),
-                            BuildCard("Informasi Pembayaran",
-                                "assets/icon/money.png"),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            BuildCard(
-                                "Pusat Bantuan", "assets/icon/helpdesk.png"),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                      ],
-                    ),
-                  ),
+              GridView(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 20),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                  childAspectRatio: 4 / 3,
+                ),
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                physics:
+                    NeverScrollableScrollPhysics(), // to disable GridView's scrolling
+                children: <Widget>[
+                  BuildCard("Layanan Kesehatan", "assets/icon/doctor.png"),
+                  BuildCard("Agenda Tindakan ", "assets/icon/calendar.png"),
+                  BuildCard("Skrining Kesehatan", "assets/icon/scan.png"),
+                  BuildCard("Informasi Pembayaran", "assets/icon/money.png"),
+                  BuildCard("Pusat Bantuan", "assets/icon/helpdesk.png"),
                 ],
               ),
             ],
