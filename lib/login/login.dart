@@ -211,47 +211,35 @@ class _LoginPageState extends State<LoginPage> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Stack(
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Checkbox(
-                                            checkColor: Colors.white,
-                                            fillColor: MaterialStateProperty
-                                                .resolveWith(getColor),
-                                            value: isChecked,
-                                            onChanged: (bool? value) {
-                                              setState(() {
-                                                isChecked = value!;
-                                              });
-                                            },
-                                          ),
-                                          Text(
-                                            'Ingat Saya',
-                                            style: themeBodyText2,
-                                          ),
-                                        ],
+                                      Checkbox(
+                                        checkColor: Colors.white,
+                                        fillColor:
+                                            MaterialStateProperty.resolveWith(
+                                                getColor),
+                                        value: isChecked,
+                                        onChanged: (bool? value) {
+                                          setState(() {
+                                            isChecked = value!;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        'Ingat Saya',
+                                        style: themeBodyText2,
                                       ),
                                     ],
                                   ),
-                                  Stack(
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          TextButton(
-                                            onPressed: () {
-                                              Get.to(ForgotSatuPage());
-                                            },
-                                            child: Text(
-                                              'Lupa password?',
-                                              style: themeBodyText1Primary,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
+                                  TextButton(
+                                    onPressed: () {
+                                      Get.to(ForgotSatuPage());
+                                    },
+                                    child: Text(
+                                      'Lupa password?',
+                                      style: themeBodyText1Primary,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -296,47 +284,27 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 00, 0, 0),
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Stack(
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0, 0, 5, 0),
-                                            child: Text(
-                                              'Pendaftaran peserta baru?',
-                                              style:
-                                                  themeBodyTextLightSecondary,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0, 0, 5, 0),
+                                    child: Text(
+                                      'Pendaftaran peserta baru?',
+                                      style: themeBodyTextLightSecondary,
+                                    ),
                                   ),
-                                  Stack(
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          TextButton(
-                                            onPressed: () {
-                                              Get.to(RegisSatuPage());
-                                            },
-                                            child: Text(
-                                              'Daftar',
-                                              style: themeBodyTextLightPrimary,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
+                                  TextButton(
+                                    onPressed: () {
+                                      Get.to(RegisSatuPage());
+                                    },
+                                    child: Text(
+                                      'Daftar',
+                                      style: themeBodyTextLightPrimary,
+                                    ),
                                   ),
                                 ],
                               ),

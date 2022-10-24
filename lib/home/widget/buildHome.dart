@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:supercharged/supercharged.dart';
 import 'package:heroicons/heroicons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../config/theme.dart';
 
@@ -35,7 +36,10 @@ class BuildCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(imageUrl, height: 40, fit: BoxFit.cover),
+          SvgPicture.asset(
+            imageUrl,
+            width: 40,
+          ),
           SizedBox(
             height: 10,
           ),

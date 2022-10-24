@@ -117,11 +117,11 @@ class _HomePageState extends State<HomePage> {
                 physics:
                     NeverScrollableScrollPhysics(), // to disable GridView's scrolling
                 children: <Widget>[
-                  BuildCard("Layanan Kesehatan", "assets/icon/doctor.png"),
-                  BuildCard("Agenda Tindakan ", "assets/icon/calendar.png"),
-                  BuildCard("Skrining Kesehatan", "assets/icon/scan.png"),
-                  BuildCard("Informasi Pembayaran", "assets/icon/money.png"),
-                  BuildCard("Pusat Bantuan", "assets/icon/helpdesk.png"),
+                  BuildCard("Layanan Kesehatan", "assets/icon/doctor.svg"),
+                  BuildCard("Agenda Tindakan ", "assets/icon/calendar.svg"),
+                  BuildCard("Skrining Kesehatan", "assets/icon/scan.svg"),
+                  BuildCard("Informasi Pembayaran", "assets/icon/wallet.svg"),
+                  BuildCard("Pusat Bantuan", "assets/icon/helpdesk.svg"),
                 ],
               ),
             ],

@@ -47,7 +47,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
+      defaultTransition: Transition.noTransition,
+      opaqueRoute: Get.isOpaqueRouteDefault,
+      popGesture: Get.isPopGestureEnable,
       debugShowCheckedModeBanner: false,
       title: "Sehat Bersama",
       home: LoginPage(),
