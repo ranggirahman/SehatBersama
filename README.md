@@ -1,7 +1,9 @@
 ## Sehat Bersama
-#### Lead  : Ranggi Rahman
-#### UI/UX : Ilham Rizki
-#### Dev   : Damar Yosa Aj
+**Lead**  : Ranggi Rahman
+
+**Dev**   : Damar Yosa A.
+
+**UI/UX** : Ilham Rizki
 
 ## About
 Aplikasi Sehat Bersama adalah aplikasi yang bertujuan memudahkan masyarakat Indonesia untuk mengakses layanan kesehatan secara digital dimana saja dan kapan saja tanpa harus melalui proses panjang untuk mendapatkan layanan kesehatan yang layak.
