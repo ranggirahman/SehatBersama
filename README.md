@@ -1,8 +1,9 @@
 ## Sehat Bersama
 #### Lead  : Ranggi Rahman
 #### UI/UX : Ilham Rizki
-#### Dev   : Damar Yosa Aji
+#### Dev   : Damar Yosa Aj
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Aplikasi Sehat Bersama adalah aplikasi yang bertujuan memudahkan masyarakat Indonesia untuk mengakses layanan kesehatan secara digital dimana saja dan kapan saja tanpa harus melalui proses panjang untuk mendapatkan layanan kesehatan yang layak.
+Dengan adanya Sehat Bersama diharapkan masyarakat indonesia bisa lebih produktif dan memiliki tujuan utamanya yaitu mewujudkan kesehatan bersama.
 
 #### Download Preview (Android) : https://github.com/ranggirahman/SehatBersama/releases/tag/v0.1.0-aplha
