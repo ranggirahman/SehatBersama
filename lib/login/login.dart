@@ -258,7 +258,7 @@ class _LoginPageState extends State<LoginPage> {
                                     Get.offAll(() => HomePage());
                                   } else {
                                     Get.snackbar(
-                                      "Alert",
+                                      "Perhatian",
                                       'Kolom NIK & Password tidak boleh kosong.',
                                       snackPosition: SnackPosition.BOTTOM,
                                       isDismissible: true,

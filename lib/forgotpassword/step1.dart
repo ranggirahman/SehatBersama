@@ -159,7 +159,7 @@ class _ForgotSatuPageState extends State<ForgotSatuPage> {
                               }
                             } else {
                               Get.snackbar(
-                                "Alert",
+                                "Perhatian",
                                 'Kolom NIK tidak boleh kosong.',
                                 snackPosition: SnackPosition.BOTTOM,
                                 isDismissible: true,
