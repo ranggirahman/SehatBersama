@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
                     child: CarouselSlider(
                       options: CarouselOptions(
-                        height: 140,
+                        height: 100,
                         viewportFraction: 1,
                         enlargeCenterPage: true,
                         autoPlay: true,

@@ -100,6 +100,7 @@ class _ForgotEmpatPageState extends State<ForgotEmpatPage> {
                   controller: textController1,
                   autofocus: false,
                   obscureText: !passwordVisibility1,
+                  textInputAction: TextInputAction.next,
                   decoration: InputDecoration(
                     hintText: 'Password Baru',
                     contentPadding: EdgeInsets.all(10.0),
@@ -180,7 +181,7 @@ class _ForgotEmpatPageState extends State<ForgotEmpatPage> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.offAll(LoginPage());
+                    Get.offAll(() => LoginPage());
                   },
                   child: Text(
                     'Simpan',

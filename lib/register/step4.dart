@@ -129,7 +129,7 @@ class _RegisEmpatPageState extends State<RegisEmpatPage> {
             padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 20),
             child: ElevatedButton(
               onPressed: () {
-                Get.offAll(LoginPage());
+                Get.offAll(() => LoginPage());
               },
               child: Text(
                 'Setuju',

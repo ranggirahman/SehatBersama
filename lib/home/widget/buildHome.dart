@@ -13,40 +13,37 @@ class BuildCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20, bottom: 20),
-      child: Container(
-        width: 150,
-        height: 50,
-        padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 12),
-        decoration: BoxDecoration(
-          color: "#FFFFFF".toColor(),
-          borderRadius: BorderRadius.circular(12.5),
-          border: Border.all(color: "#DADEE3".toColor()),
-          boxShadow: [
-            BoxShadow(
-              offset: const Offset(2, 5),
-              blurRadius: 4,
-              spreadRadius: 0,
-              color: Colors.grey.withOpacity(.1),
-            ),
-          ],
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(imageUrl, height: 40, fit: BoxFit.cover),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              text,
-              style: themeTitle4,
-            ),
-          ],
-        ),
+    return Container(
+      width: 166,
+      height: 130,
+      padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 12),
+      decoration: BoxDecoration(
+        color: "#FFFFFF".toColor(),
+        borderRadius: BorderRadius.circular(12.5),
+        border: Border.all(color: "#DADEE3".toColor()),
+        boxShadow: [
+          BoxShadow(
+            offset: const Offset(2, 5),
+            blurRadius: 4,
+            spreadRadius: 0,
+            color: Colors.grey.withOpacity(.1),
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset(imageUrl, height: 40, fit: BoxFit.cover),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            text,
+            style: themeTitle4,
+          ),
+        ],
       ),
     );
   }

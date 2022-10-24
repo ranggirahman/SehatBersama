@@ -95,6 +95,7 @@ class _RegisSatuPageState extends State<RegisSatuPage> {
                   controller: textController1,
                   autofocus: false,
                   obscureText: false,
+                  textInputAction: TextInputAction.next,
                   decoration: InputDecoration(
                     hintText: 'Masukan NIK',
                     contentPadding: EdgeInsets.all(10.0),

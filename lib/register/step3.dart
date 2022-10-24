@@ -100,6 +100,7 @@ class _RegisTigaPageState extends State<RegisTigaPage> {
                   controller: textController1,
                   autofocus: false,
                   obscureText: !passwordVisibility1,
+                  textInputAction: TextInputAction.next,
                   decoration: InputDecoration(
                     hintText: 'Password Baru',
                     contentPadding: EdgeInsets.all(10.0),

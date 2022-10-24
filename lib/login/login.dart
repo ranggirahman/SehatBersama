@@ -9,8 +9,10 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   bool isChecked = false;
-  TextEditingController? textController1;
-  TextEditingController? textController2;
+
+  //? input
+  TextEditingController textController1 = TextEditingController();
+  TextEditingController textController2 = TextEditingController();
 
   late bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -55,12 +57,12 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(60),
+          preferredSize: Size.fromHeight(30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10, 10, 20, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(10, 0, 20, 0),
                 child: Align(
                   alignment: AlignmentDirectional(-1, 0),
                   child: SvgPicture.asset(
@@ -132,6 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                                 autofocus: false,
                                 obscureText: false,
                                 keyboardType: TextInputType.number,
+                                textInputAction: TextInputAction.next,
                                 decoration: InputDecoration(
                                   hintText: 'Masukan NIK',
                                   contentPadding: EdgeInsets.all(10.0),
@@ -258,7 +261,23 @@ class _LoginPageState extends State<LoginPage> {
                                   EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                               child: ElevatedButton(
                                 onPressed: () {
-                                  Get.offAll(HomePage());
+                                  if ((textController1.text != "" &&
+                                          textController1.text != null &&
+                                          textController1.text.isNotEmpty) &&
+                                      (textController2.text != "" &&
+                                          textController2.text != null &&
+                                          textController2.text.isNotEmpty)) {
+                                    Get.offAll(() => HomePage());
+                                  } else {
+                                    Get.snackbar(
+                                      "Alert",
+                                      'Kolom NIK & Password tidak boleh kosong.',
+                                      snackPosition: SnackPosition.BOTTOM,
+                                      isDismissible: true,
+                                      duration: Duration(seconds: 3),
+                                      margin: EdgeInsets.all(20),
+                                    );
+                                  }
                                 },
                                 child: Text(
                                   'Masuk',
@@ -311,7 +330,7 @@ class _LoginPageState extends State<LoginPage> {
                                               Get.to(RegisSatuPage());
                                             },
                                             child: Text(
-                                              'Klik disini',
+                                              'Daftar',
                                               style: themeBodyTextLightPrimary,
                                             ),
                                           ),
