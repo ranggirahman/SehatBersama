@@ -128,7 +128,83 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: buildNavigation(),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                blurRadius: 4,
+                spreadRadius: 0,
+                color: Colors.grey.withOpacity(.3)),
+          ],
+        ),
+        child: BottomAppBar(
+          color: "#FFFFFF".toColor(),
+          child: SizedBox(
+            height: 70,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconBottomBar(
+                    text: "Home",
+                    iconVar: HeroIcons.home,
+                    selected: _selectedIndex == 0,
+                    onPressed: () {
+                      setState(() {
+                        _selectedIndex = 0;
+                      });
+                      Get.offAll(() => HomePage());
+                    },
+                  ),
+                  IconBottomBar(
+                    text: "Konsultasi",
+                    iconVar: HeroIcons.chatBubbleLeftRight,
+                    selected: _selectedIndex == 1,
+                    onPressed: () {
+                      setState(() {
+                        _selectedIndex = 1;
+                      });
+                    },
+                  ),
+                  IconBottomBar(
+                    text: "Peserta",
+                    iconVar: HeroIcons.users,
+                    selected: _selectedIndex == 2,
+                    onPressed: () {
+                      setState(() {
+                        _selectedIndex = 2;
+                      });
+                      Get.offAll(() => PesertaPage());
+                    },
+                  ),
+                  IconBottomBar(
+                    text: "Artikel",
+                    iconVar: HeroIcons.newspaper,
+                    selected: _selectedIndex == 3,
+                    onPressed: () {
+                      setState(() {
+                        _selectedIndex = 3;
+                      });
+                    },
+                  ),
+                  IconBottomBar(
+                    text: "Setelan",
+                    iconVar: HeroIcons.cog6Tooth,
+                    selected: _selectedIndex == 4,
+                    onPressed: () {
+                      setState(() {
+                        _selectedIndex = 4;
+                      });
+                      Get.offAll(() => LoginPage());
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
