@@ -83,7 +83,6 @@ flutter:
   assets:
     - assets/
     - assets/background/
-    - assets/empty/
     - assets/icon/
     - assets/logo/
     - assets/lottie/

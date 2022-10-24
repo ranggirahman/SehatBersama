@@ -69,9 +69,11 @@ class _RegisSatuPageState extends State<RegisSatuPage> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/background/2.png'),
-            fit: BoxFit.fill,
+          gradient: LinearGradient(
+            colors: [Colors.white, Color(0xFFD4FFE7)],
+            stops: [0.6, 1],
+            begin: AlignmentDirectional(0, -1),
+            end: AlignmentDirectional(0, 1),
           ),
           shape: BoxShape.rectangle,
         ),
@@ -161,6 +163,21 @@ class _RegisSatuPageState extends State<RegisSatuPage> {
                       borderRadius: BorderRadius.all(Radius.circular(8)),
                     ),
                   ),
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    SvgPicture.asset(
+                      'assets/logo/bpjs.svg',
+                      width: 120,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    )
+                  ],
                 ),
               ),
             ],

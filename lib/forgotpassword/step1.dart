@@ -70,81 +70,97 @@ class _ForgotSatuPageState extends State<ForgotSatuPage> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/background/2.png'),
-            fit: BoxFit.fill,
+          gradient: LinearGradient(
+            colors: [Colors.white, Color(0xFFD4FFE7)],
+            stops: [0.6, 1],
+            begin: AlignmentDirectional(0, -1),
+            end: AlignmentDirectional(0, 1),
           ),
           shape: BoxShape.rectangle,
         ),
         child: ListView(
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Text(
-                      'NIK',
-                      style: themeBodyText1,
-                    ),
-                  ),
-                  Card(
-                    child: TextFormField(
-                      controller: textController,
-                      autofocus: false,
-                      obscureText: false,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        hintText: 'Masukan NIK',
-                        contentPadding: EdgeInsets.all(10.0),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: "C9CACA".toColor(),
-                            width: 1,
-                          ),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: "EEEEEF".toColor(),
-                            width: 1,
-                          ),
-                        ),
+            SizedBox(
+              // 1st child of listView
+              height: MediaQuery.of(context).size.height - 140,
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      child: Text(
+                        'NIK',
+                        style: themeBodyText1,
                       ),
-                      style: themeBodyText1,
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 0),
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 310.0,
-                      child: SliderCaptcha(
-                        controller: controller,
-                        title: 'Geser untuk selanjutnya',
-                        titleStyle: TextStyle(
-                          color: Color(0xFF04A04A),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
+                    Card(
+                      child: TextFormField(
+                        controller: textController,
+                        autofocus: false,
+                        obscureText: false,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          hintText: 'Masukan NIK',
+                          contentPadding: EdgeInsets.all(10.0),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: "C9CACA".toColor(),
+                              width: 1,
+                            ),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: "EEEEEF".toColor(),
+                              width: 1,
+                            ),
+                          ),
                         ),
-                        image: Image.asset(
-                          'assets/captcha/1.jpg',
-                          fit: BoxFit.fitWidth,
-                        ),
-                        colorBar: "DFE1E2".toColor(),
-                        colorCaptChar: "6F656D".toColor(),
-                        onConfirm: (value) async {
-                          if ((textController.text != "" &&
-                              textController.text != null &&
-                              textController.text.isNotEmpty)) {
-                            if (value) {
-                              Get.to(ForgotDuaPage());
+                        style: themeBodyText1,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 0),
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 310.0,
+                        child: SliderCaptcha(
+                          controller: controller,
+                          title: 'Geser untuk selanjutnya',
+                          titleStyle: TextStyle(
+                            color: Color(0xFF04A04A),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          image: Image.asset(
+                            'assets/captcha/1.jpg',
+                            fit: BoxFit.fitWidth,
+                          ),
+                          colorBar: "DFE1E2".toColor(),
+                          colorCaptChar: "6F656D".toColor(),
+                          onConfirm: (value) async {
+                            if ((textController.text != "" &&
+                                textController.text != null &&
+                                textController.text.isNotEmpty)) {
+                              if (value) {
+                                Get.to(ForgotDuaPage());
+                              } else {
+                                Get.snackbar(
+                                  "Captcha",
+                                  'Pastikan posisi puzzle sesuai dengan tempatnya.',
+                                  snackPosition: SnackPosition.BOTTOM,
+                                  isDismissible: true,
+                                  duration: Duration(seconds: 3),
+                                  margin: EdgeInsets.all(20),
+                                );
+                                controller.create.call();
+                              }
                             } else {
                               Get.snackbar(
-                                "Captcha",
-                                'Pastikan posisi puzzle sesuai dengan tempatnya.',
+                                "Alert",
+                                'Kolom NIK tidak boleh kosong.',
                                 snackPosition: SnackPosition.BOTTOM,
                                 isDismissible: true,
                                 duration: Duration(seconds: 3),
@@ -152,22 +168,27 @@ class _ForgotSatuPageState extends State<ForgotSatuPage> {
                               );
                               controller.create.call();
                             }
-                          } else {
-                            Get.snackbar(
-                              "Alert",
-                              'Kolom NIK tidak boleh kosong.',
-                              snackPosition: SnackPosition.BOTTOM,
-                              isDismissible: true,
-                              duration: Duration(seconds: 3),
-                              margin: EdgeInsets.all(20),
-                            );
-                            controller.create.call();
-                          }
-                        },
+                          },
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                    Expanded(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          SvgPicture.asset(
+                            'assets/logo/bpjs.svg',
+                            width: 120,
+                          ),
+                          SizedBox(
+                            height: 20,
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
